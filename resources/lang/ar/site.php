@@ -1,0 +1,65 @@
+<?php
+
+return [
+    'home'                      => 'الرئيسية',
+    'about'                     => 'من نحن',
+    'recipes'                     => 'recipes',
+    'categories'                     => 'categories',
+    'contact'                => 'تواصل معنا',
+    'read_more'                 => 'معرفة المزيد',
+   
+    'your_name'                 => 'الاسم',
+    'your_email'                => 'بريدك الإلكتروني',
+    'your_phone'                => 'الهاتف',
+    'your_message'              => 'الموضوع',
+    'send_now'                  => 'إرسال الآن',
+
+    'useful_links'              => 'روابط ذات صلة',
+    'contact_info'              => 'المزادات الأخيرة',
+    'follow_us'                 => 'مواقع التواصل',
+    'copyrights'                => 'جميع الحقوق محفوظة',
+    'deltaITech'                => 'شركة دلتا',
+
+    'the_company_auctions'      => 'مزادات الشرق الأوسط',
+    'coming_auctions'           => 'المزادات القادمة',
+    'previous_auctions'         => 'المزادات السابقة',
+
+    'phone'                     => 'الهاتف',
+
+    'more'             => 'معرفة المزيد',
+    'language'         => 'اللغات',
+    'partner'          => 'شركاؤنا',
+    'clients'          => 'عملاء',
+    'more_comp'        => 'المزيد من الشركات',
+    'about_comp'       => 'عن شركتنا',
+    'start_bus'        => 'ابدأ أعمالك  الخاصة',
+    'name'             => 'الإسم',
+    'email'            => 'البريد الإلكتروني',
+    'message'          => 'الرسالة',
+    'send'             => 'ارسال',
+    'telephone'        => 'الهاتف',
+    'fax'              => 'الفاكس',
+    'all_companies'    => 'كل الشركات',
+    'working_times'    => 'اوقات العمل',
+    'website'          => 'الموقع الإلكتروني',
+    'address'          => 'العنوان',
+    'contact_now'      => 'تواصل معنا الان',
+    'search_key'       => 'ابحث بكلمة مفتاحية',
+    'search'           => 'ابحث',
+
+    'company_detail'   => 'تفاصيل الشركة',
+    'name_required'    => 'الاسم مطلوب',
+    'email_required'   => 'البريد الإلكتروني مطلوب',
+    'message_required' => 'الرسالة مطلوبة',
+    'contact_saved'    => 'تم ارسال الرسالة بنجاح',
+
+    'lang'    => 'العربية',
+
+    'failed_message'    => 'يوجد خطأ، تفقد جميع الحقول (لا يمكن ترك حقول فارغة)',
+    'success_message'    => 'تم إرسال رسالتك بنجاح، سيتم التواصل معك في أقرب وقت',
+    'invalid_name'    => 'الاسم مطلوب',
+    'invalid_email'    => 'بريد إلكتروني غير صالح',
+    'invalid_phone'    => 'هاتف غير صالح',
+    'invalid_message'    => 'الرسالة مطلوبة',
+    'page_not_found'    => 'صفحة غير موجودة',
+];

@@ -1,0 +1,174 @@
+extends index
+
+block website_title
+    title #{website_title} | profile
+
+block home_block
+    //breadcrumb
+    nav(aria-label="breadcrumb" class="main-breadcrumb" style="background-image:url('images/bgs/broad.jpg')")
+        div(class="container")
+            div(class="breadcrumb-title")
+                h2 profile
+            nav(aria-label="breadcrumb")
+                ol(class="breadcrumb")
+                    li(class="breadcrumb-item")
+                        a(href="#") Home
+                    li(class="breadcrumb-item active", aria-current="page") contact
+    //breadcrumb
+
+    //profile
+    section(class="profile")
+        div(class="container")
+            div(class="profile-content")
+                div(class="row")
+                    div(class="col-lg-3 col-md-5 flex-column d-flex d-md-block")
+                        div(class="nav flex-column nav-pills shadow", id="profile_tabs" role="tablist", aria-orientation="vertical")
+                            button(class="nav-link active", id="v-pills-1-tab" data-bs-toggle="pill", data-bs-target="#v-pills-1", type="button", role="tab", aria-controls="v-pills-1", aria-selected="false") edit profile
+                            button#v-pills-2-tab(class="nav-link", data-bs-toggle="pill", data-bs-target="#v-pills-2", type="button", role="tab", aria-controls="v-pills-2", aria-selected="false") change password
+                            button#v-pills-3-tab(class="nav-link", data-bs-toggle="pill", data-bs-target="#v-pills-3", type="button", role="tab", aria-controls="v-pills-3", aria-selected="false") favorite recipes
+                        div(class="profile-info shadow") 
+                            div(class="image") 
+                                img(src="images/profile.png", class="img-fluid" alt="")
+                            div(class="details") 
+                                h3 mohamed ahmed
+                                p egypt, cairo
+                                a(href="#!" class="btn btn-primary") logout
+                    div(class="col-lg-9 col-md-7")
+                        form(class="g-3 shadow" action="" novalidate)
+                            div(class="tab-content" id="profile_tabsContent")
+                                div(class="tab-pane fade show active", id="v-pills-1" role="tabpanel", aria-labelledby="v-pills-1-tab") 
+                                    div(class="row")
+                                        div(class="col-lg-12")
+                                            h3(class="subtitle") edit profile
+                                            div(class="alert alert-danger alert-dismissible fade show", role="alert")
+                                                strong Holy guacamole!
+                                                | You should check in on some of those fields below.
+                                                button(type="button", class="btn-close", data-bs-dismiss="alert", aria-label="Close")
+                                        div(class="col-lg-12")
+                                            div(class="form-group")
+                                                input(type="text" class="form-control" placeholder="Name" required)
+                                        div(class="col-lg-12")
+                                            div(class="form-group")
+                                                input(type="number" class="form-control" placeholder="Number" required)
+                                        div(class="col-lg-12")
+                                            div(class="form-group")
+                                                input(type="email" class="form-control" placeholder="Email" required)
+                                        div(class="col-lg-12")
+                                            div(class="form-group")
+                                                label(class="mb-2") Change Image
+                                                input(type="file" class="form-control form-control-lg" id="formFile" placeholder="Change Image" required)
+                                        div(class="col-lg-12")
+                                            div(class="form-group")
+                                                button(class="btn btn-danger hvr-sweep-to-top" type="submit") save changes
+                                div(class="tab-pane fade", id="v-pills-2" role="tabpanel", aria-labelledby="v-pills-2-tab") 
+                                    div(class="row")
+                                        div(class="col-lg-12")
+                                            h3(class="subtitle") change password
+                                            div(class="alert alert-warning alert-dismissible fade show", role="alert")
+                                                strong Holy guacamole!
+                                                | You should check in on some of those fields below.
+                                                button(type="button", class="btn-close", data-bs-dismiss="alert", aria-label="Close")
+                                        div(class="col-lg-12")
+                                            div(class="form-group")
+                                                input(type="password" class="form-control" placeholder="Old Password" required)
+                                        div(class="col-lg-12")
+                                            div(class="form-group")
+                                                input(type="password" class="form-control" placeholder="New Password" required)
+                                        div(class="col-lg-12")
+                                            div(class="form-group")
+                                                input(type="password" class="form-control" placeholder="Confirm New Password" required)
+                                        div(class="col-lg-12")
+                                            div(class="form-group")
+                                                button(class="btn btn-danger hvr-sweep-to-top" type="submit") save changes
+                                div(class="tab-pane fade", id="v-pills-3" role="tabpanel", aria-labelledby="v-pills-3-tab") 
+                                    div(class="table-responsive table-area")
+                                        table(class="table table-hover")
+                                            thead
+                                                tr
+                                                    th recipe name
+                                                    th Section
+                                                    th Adding Date 
+                                                    th Action 
+                                            tbody
+                                                tr(class="shadow-sm")
+                                                    td 
+                                                        a(href="single-recipe.html" class="recipe-name") 
+                                                            div(class="image")
+                                                                img(src="images/recipes/01.jpg" class="img-fluid" alt="")
+                                                            | An example alert with an icon
+                                                    td Salads
+                                                    td 2021-05-20 15:36:25
+                                                    td 
+                                                        button(class="btn remove", type="button") remove
+                                                tr(class="shadow-sm")
+                                                    td 
+                                                        a(href="single-recipe.html" class="recipe-name") 
+                                                            div(class="image")
+                                                                img(src="images/recipes/01.jpg" class="img-fluid" alt="")
+                                                            | An example alert with an icon
+                                                    td Salads
+                                                    td 2021-05-20 15:36:25
+                                                    td 
+                                                        button(class="btn remove", type="button") remove
+                                                tr(class="shadow-sm")
+                                                    td 
+                                                        a(href="single-recipe.html" class="recipe-name") 
+                                                            div(class="image")
+                                                                img(src="images/recipes/01.jpg" class="img-fluid" alt="")
+                                                            | An example alert with an icon
+                                                    td Salads
+                                                    td 2021-05-20 15:36:25
+                                                    td 
+                                                        button(class="btn remove", type="button") remove
+                                                tr(class="shadow-sm")
+                                                    td 
+                                                        a(href="single-recipe.html" class="recipe-name") 
+                                                            div(class="image")
+                                                                img(src="images/recipes/01.jpg" class="img-fluid" alt="")
+                                                            | An example alert with an icon
+                                                    td Salads
+                                                    td 2021-05-20 15:36:25
+                                                    td 
+                                                        button(class="btn remove", type="button") remove
+                                                tr(class="shadow-sm")
+                                                    td 
+                                                        a(href="single-recipe.html" class="recipe-name") 
+                                                            div(class="image")
+                                                                img(src="images/recipes/01.jpg" class="img-fluid" alt="")
+                                                            | An example alert with an icon
+                                                    td Salads
+                                                    td 2021-05-20 15:36:25
+                                                    td 
+                                                        button(class="btn remove", type="button") remove
+                                                tr(class="shadow-sm")
+                                                    td 
+                                                        a(href="single-recipe.html" class="recipe-name") 
+                                                            div(class="image")
+                                                                img(src="images/recipes/01.jpg" class="img-fluid" alt="")
+                                                            | An example alert with an icon
+                                                    td Salads
+                                                    td 2021-05-20 15:36:25
+                                                    td 
+                                                        button(class="btn remove", type="button") remove
+                                    div(class="")
+                                        nav(aria-label="Page navigation" class="navigation")
+                                            ul(class="pagination")
+                                                li(class="page-item")
+                                                    a(class="page-link arr", href="#!", aria-label="Previous")
+                                                        span(aria-hidden="true") &laquo;
+                                                li(class="page-item active")
+                                                    a(class="page-link", href="#!") 1
+                                                li(class="page-item")
+                                                    a(class="page-link", href="#!") 2
+                                                li(class="page-item")
+                                                    a(class="page-link", href="#!") 3
+                                                li(class="page-item")
+                                                    a(class="page-link", href="#!") 4
+                                                li(class="page-item")
+                                                    a(class="page-link", href="#!") 5
+                                                li(class="page-item")
+                                                    a(class="page-link", href="#!") 6
+                                                li(class="page-item")
+                                                    a(class="page-link arr", href="#!", aria-label="Next")
+                                                        span(aria-hidden="true") &raquo;
+    //profile 

@@ -1,0 +1,83 @@
+extends index
+
+block website_title
+    title #{website_title} | about
+
+block home_block
+    //breadcrumb
+    nav(aria-label="breadcrumb" class="main-breadcrumb" style="background-image:url('images/bgs/broad.jpg')")
+        div(class="container")
+            div(class="breadcrumb-title")
+                h2 about
+            nav(aria-label="breadcrumb")
+                ol(class="breadcrumb")
+                    li(class="breadcrumb-item")
+                        a(href="#") Home
+                    li(class="breadcrumb-item active", aria-current="page") about
+    //breadcrumb
+
+    //about
+    section(class="about-page")
+        div(class="container")
+            div(class="about-content")
+                img(src="images/bgs/01.png", class="left-pos" class="img-fluid" alt="")
+                img(src="images/bgs/02.png", class="right-pos" class="img-fluid" alt="")
+                div(class="about-box")
+                    div(class="main-title")
+                        h2 A Cook for 
+                            span(class="diff-color") 25 Years 
+                            | a hobbiest for 30
+                            span(class="line")
+                        p Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting
+                    div(class="about-btn")
+                        a(class="btn btn-danger" href="contact.html") contact now
+    //about
+
+    //instagram images
+    section(class="instagram")
+        div(class="container")
+            div(class="instagram-content")
+                div(class="row justify-content-center")
+                    div(class="box col-lg-4 col-md-6 col-sm-6")
+                        div(class="instagram-box")
+                            a(href="#!") 
+                                div(class="image")
+                                    img(src="images/insta/01.jpg", class="img-fluid" alt="")
+                                div(class="icon")
+                                    i(class="bi bi-instagram")
+                    div(class="box col-lg-4 col-md-6 col-sm-6")
+                        div(class="instagram-box")
+                            a(href="#!") 
+                                div(class="image")
+                                    img(src="images/insta/02.jpg", class="img-fluid" alt="")
+                                div(class="icon")
+                                    i(class="bi bi-instagram")
+                    div(class="box col-lg-4 col-md-6 col-sm-6")
+                        div(class="instagram-box")
+                            a(href="#!") 
+                                div(class="image")
+                                    img(src="images/insta/03.jpg", class="img-fluid" alt="")
+                                div(class="icon")
+                                    i(class="bi bi-instagram")
+                    div(class="box col-lg-4 col-md-6 col-sm-6")
+                        div(class="instagram-box")
+                            a(href="#!") 
+                                div(class="image")
+                                    img(src="images/insta/04.jpg", class="img-fluid" alt="")
+                                div(class="icon")
+                                    i(class="bi bi-instagram")
+                    div(class="box col-lg-4 col-md-6 col-sm-6")
+                        div(class="instagram-box")
+                            a(href="#!") 
+                                div(class="image")
+                                    img(src="images/insta/05.jpg", class="img-fluid" alt="")
+                                div(class="icon")
+                                    i(class="bi bi-instagram")
+                    div(class="box col-lg-4 col-md-6 col-sm-6")
+                        div(class="instagram-box")
+                            a(href="#!") 
+                                div(class="image")
+                                    img(src="images/insta/06.jpg", class="img-fluid" alt="")
+                                div(class="icon")
+                                    i(class="bi bi-instagram")
+    //instagram images

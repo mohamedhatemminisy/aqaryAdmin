@@ -1,0 +1,1053 @@
+//about page
+section.about-page {
+    padding: $padding_section;
+    position: relative;
+
+    .main-title {
+        h2 {
+            text-transform: none;
+            margin-bottom: 25px;
+        }
+    }
+
+    .about-content {
+
+        .left-pos,
+        .right-pos {
+            position: absolute;
+            -webkit-animation: up_down 4s infinite alternate;
+            animation: up_down 4s infinite alternate;
+        }
+
+        .left-pos {
+            left: 0;
+            -webkit-animation: up_down 2s infinite alternate-reverse;
+            animation: up_down 2s infinite alternate-reverse;
+        }
+
+        .right-pos {
+            right: -150px;
+        }
+
+        .about-btn {
+            text-align: center;
+
+            .btn {
+                background-color: $main_color;
+                color: #fff;
+                padding: 10px 30px;
+                display: inline-block;
+                border-color: #fff;
+                box-shadow: 0 10px 20px 0 rgba(0, 0, 0, 0.16);
+                font-size: 18px;
+                @include borderRadius(10px);
+                @include transition(all ease 0.3s);
+
+                &:hover {
+                    box-shadow: none;
+                }
+            }
+        }
+    }
+
+    @-webkit-keyframes up_down {
+        0% {
+            @include transform(translateY(0));
+        }
+
+        100% {
+            transform: translateY(-20px);
+        }
+    }
+
+    @keyframes up_down {
+        0% {
+            @include transform(translateY(0));
+        }
+
+        100% {
+            @include transform(translateY(-20px));
+        }
+    }
+}
+
+//about page
+
+//recipes page
+section.recipes-page {
+    .sidebar-widget {
+        position: sticky;
+        top: 20px;
+
+        .filter-recipes {
+            background-color: #fff;
+            padding: 15px;
+            @include borderRadius(10px);
+            margin-bottom: 25px;
+            @include boxshadow(0 3px 12px rgb(0 0 0 / 5%));
+
+            hr {
+                background-color: #b1b1b1;
+            }
+
+            .subtitle {
+                margin-bottom: 20px;
+
+                h3 {
+                    margin: 0;
+                    text-transform: capitalize;
+                    font-size: 18px;
+                }
+            }
+
+            .form-check {
+                margin-bottom: 10px;
+
+                &:last-of-type {
+                    margin-bottom: 0;
+                }
+            }
+
+            .recipe-dropdowns {
+                margin-bottom: 20px;
+
+                .form-group {
+                    margin-bottom: 45px;
+                }
+            }
+
+            .recipe-buttons {
+                text-align: initial;
+
+                .btn {
+                    background-color: $main_color;
+                    text-transform: capitalize;
+                    @include borderRadius(25px);
+                    color: #fff;
+                    padding: 8px 20px;
+                    font-size: 14px;
+
+                    &:focus {
+                        box-shadow: none;
+                        background-color: $dark_color;
+                    }
+
+                    i {
+                        margin-inline-end: 5px;
+                    }
+
+                    &.reset {
+                        background-color: transparent;
+                        border: 1px solid #e0e0e0;
+                        color: #000;
+                    }
+                }
+            }
+
+            .dk-select {
+                display: block;
+                line-height: 1.5em;
+                width: 100%;
+                text-align: initial;
+                user-select: none;
+            }
+
+            .dk-selected {
+                border: none;
+                border-bottom: 1px solid #dddddd;
+                @include borderRadius(0);
+                padding: 0 0.5em 10px;
+                font-size: 14px;
+                background: transparent;
+                text-transform: capitalize;
+
+                &::after {
+                    border-left: none;
+                }
+
+                &::before {
+                    border-top-color: #3e3e3e;
+                }
+            }
+
+            .dk-select-open-down {
+                .dk-selected {
+                    @include borderRadius(0);
+                    border-color: initial;
+                    border-bottom: 1px solid $main_color;
+                }
+
+                .dk-select-options {
+                    border-color: #ddd;
+                    border-top: none;
+                    max-height: 650px;
+                    padding: 0;
+                    margin-top: 2px;
+                    @include transition(all ease 0.5s);
+
+                    .dk-option-highlight {
+                        background-color: rgba(0, 0, 0, 0.06);
+                        color: rgba(0, 0, 0, 0.3);
+                    }
+                }
+            }
+
+            .dk-option {
+                padding: 5px 0.5em;
+                font-size: 14px;
+                text-transform: capitalize;
+            }
+        }
+
+    }
+}
+
+.tags {
+    background-color: #fff;
+    padding: 15px;
+    @include borderRadius(10px);
+    @include boxshadow(0 3px 12px rgb(0 0 0 / 5%));
+    margin-bottom: 20px;
+
+    a {
+        display: inline-block;
+        font-size: 13px;
+        padding: 5px 12px;
+        //border: 1px solid rgba(0, 0, 0, 0.1);
+        color: #fff;
+        background-color: $main_color;
+        margin: 2px 2px 2px 0;
+        @include transition(all linear 0.3s);
+        @include borderRadius(10px);
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        &:hover {
+            background-color: $dark_color;
+        }
+    }
+    .badge {
+        padding: 0 5px;
+        @extend %center;
+        line-height: normal;
+        background-color: #da3227;
+        color: #fff;
+        font-size: 12px;
+    }
+
+    .subtitle {
+        margin-bottom: 20px;
+
+        h3 {
+            margin: 0;
+            text-transform: capitalize;
+            font-size: 18px;
+        }
+    }
+}
+
+//recipes page
+
+//single recipe page
+section.single-recipe-page {
+    padding: $padding_section;
+    background-color: #fff;
+
+    .single-recipe-content {
+        .single-recipe-box {
+            hr {
+                background-color: #b1b1b1;
+            }
+
+            .image {
+                margin-bottom: 15px;
+
+                img {
+                    @extend %fitimage;
+                    @include borderRadius(10px);
+                    max-height: 450px;
+                    width: 100%;
+                }
+            }
+
+            .title {
+                font-weight: 600;
+                font-size: 24px;
+            }
+
+            .subtitle {
+                color: $dark_color;
+                text-transform: capitalize;
+                font-size: 20px;
+                line-height: 1.5;
+                min-height: 27px;
+                margin-bottom: 5px;
+                font-weight: 600;
+            }
+
+            .text {
+                .details {
+                    color: #515151;
+                    font-size: 15px;
+                    margin-bottom: 10px;
+                    @extend %max_lines;
+                    -webkit-line-clamp: 2;
+                    margin-bottom: 10px;
+                    min-height: 45px;
+                }
+            }
+
+            .meta {
+                display: flex;
+                color: #4b4b4b;
+                font-size: 14px;
+                margin-bottom: 25px;
+
+                i {
+                    margin-inline-end: 5px;
+                }
+
+                .single {
+                    margin-inline-end: 15px;
+                }
+            }
+
+            .ingredients {
+                .ct-list {
+                    padding: 0;
+
+                    li {
+                        position: relative;
+                        margin-top: 10px;
+                        padding-left: 25px;
+                        list-style: none;
+
+                        &::before {
+                            font-family: "bootstrap-icons";
+                            content: "check2";
+                            -webkit-font-smoothing: antialiased;
+                            font-style: normal;
+                            font-variant: normal;
+                            font-weight: 900;
+                            position: absolute;
+                            left: 0;
+                            top: 50%;
+                            @include transform(translateY(-50%));
+                            color: $main_color;
+                        }
+                    }
+                }
+            }
+
+            .instructions {
+                margin-bottom: 25px;
+
+                .step {
+                    margin-bottom: 20px;
+
+                    &:last-child {
+                        margin-bottom: 0;
+                    }
+
+                    h4 {
+                        font-size: 18px;
+                    }
+
+                    p {
+                        color: #515151;
+                        font-size: 14px;
+                    }
+                }
+            }
+
+            .comment-title {
+                margin-bottom: 25px;
+                font-size: 18px;
+            }
+            .comments-list {
+                margin-bottom: 25px;
+
+                .subtitle {
+                    margin-bottom: 25px;
+                }
+
+                ul {
+                    padding: 0;
+                }
+
+                .comment-item {
+                    display: -webkit-box;
+                    display: -ms-flexbox;
+                    display: flex;
+                    -webkit-box-align: start;
+                    -ms-flex-align: start;
+                    align-items: flex-start;
+                    position: relative;
+                    margin-bottom: 25px;
+
+                    &:last-child {
+                        margin-bottom: 0;
+                    }
+
+                    img {
+                        width: 50px;
+                        height: 50px;
+                        margin-inline-end: 10px;
+                        @include borderRadius(50%);
+                        border: 1px solid #ddd;
+                        padding: 2px;
+                    }
+
+                    .comment-body {
+                        flex: 1;
+
+                        h5 {
+                            font-size: 18px;
+                        }
+
+                        span {
+                            display: inline-block;
+                            margin-bottom: 15px;
+                            color: #848486;
+                            font-size: 13px;
+                            line-height: 21px;
+                            position: absolute;
+                            top: 4px;
+                            right: 0;
+                        }
+
+                        p {
+                            font-size: 14px;
+                            line-height: 20px;
+                            margin-bottom: 10px;
+                            color: #515151;
+                        }
+
+                        .reply-link {
+                            color: #1D2228;
+                            font-weight: 600;
+                        }
+                    }
+                }
+            }
+
+            .comment-form {
+                margin-bottom: 30px;
+
+                .subtitle {
+                    margin-bottom: 20px;
+                }
+
+                .form-group {
+                    margin-bottom: 15px;
+                }
+
+                .btn-form {
+                    display: flex;
+                    align-items: center;
+                    .btn {
+                        background-color: $main_color;
+                        padding: 10px 25px;
+                        display: inline-block;
+                        @include borderRadius(5px);
+                        border: none;
+                        box-shadow: 0 10px 20px 0 rgba(0, 0, 0, 0.16);
+                        color: #fff;
+                        text-transform: capitalize;
+                        font-size: 16px;
+
+                        &:focus, &:hover {
+                            background-color: $dark_color
+                        }
+                    }
+                    .successMessage {
+                        color: $main_color;
+                        margin-inline-start: 35px;
+                    }
+                }
+
+                .form-control {
+                    @include transition(all ease 0.3s);
+                    color: #333;
+                    background-color: #fff;
+                    font-size: 14px;
+                    padding: 10px;
+                    @include borderRadius(5px);
+
+                    &:hover,
+                    &:focus {
+                        box-shadow: none;
+                        outline: none;
+                        border-color: #5a5a5a;
+                    }
+
+                    &::placeholder {
+                        color: #79859c;
+                    }
+                }
+
+                textarea {
+                    resize: none;
+                }
+
+                .alert-danger {
+                    ul {
+                        list-style: none;
+                        padding: 0;
+                        margin: 0
+                    }
+                }
+            }
+        }
+    }
+
+    .sidebar-widget {
+        .relative-recipes {
+            @include borderRadius(10px);
+
+            .relative-recipe-box {
+                background: #fff;
+                border-radius: 15px;
+                margin-bottom: 15px;
+                position: relative;
+                @include borderRadius(10px);
+                overflow: hidden;
+
+                &:hover {
+                    img{
+                        @include transform(scale(1.2))
+                    }
+                    .text {
+                        background-color: rgba(0, 0, 0, .85);
+                        .subtitle {
+                            color: $main_color;
+                        }
+                    }
+                }
+
+                &:last-child {
+                    margin-bottom: 0;
+                }
+
+                .image {
+                    max-height: 140px;
+
+                    img {
+                        @include borderRadius(10px);
+                        @extend %fitimage;
+                        @include transition(all ease 0.3s);
+                    }
+                }
+
+                .text {
+                    position: absolute;
+                    width: 100%;
+                    height: 100%;
+                    left: 0;
+                    top: 0;
+                    background-color: rgba(0, 0, 0, .7);
+                    padding: 20px;
+                    text-align: center;
+                    display: flex;
+                    justify-content: center;
+                    flex-direction: column;
+                    @include transition(all ease 0.3s);
+
+                    .subtitle {
+                        color: #fff;
+                        text-transform: capitalize;
+                        font-size: 16px;
+                        line-height: 1.5;
+                        @extend %max_lines;
+                        -webkit-line-clamp: 1;
+                        min-height: 27px;
+                        margin-bottom: 5px;
+                        font-weight: 600;
+                        @include transition(all ease 0.3s);
+                    }
+
+                    .details {
+                        color: #fff;
+                        font-size: 14px;
+                        @extend %max_lines;
+                        -webkit-line-clamp: 2;
+                        min-height: 45px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+//single recipe page
+
+//contact page
+section.contact {
+    padding: $padding_section;
+
+    .info-area {
+        margin-bottom: 50px;
+        z-index: 9;
+        position: relative;
+        //max-width: 1000px;
+        margin: auto;
+        margin-bottom: 25px;
+
+        .info-box {
+            text-align: center;
+            background-color: #fbfbfb;
+            @include borderRadius(10px);
+            padding: 40px 20px;
+            position: relative;
+            overflow: hidden;
+            z-index: 1;
+
+            &:hover {
+                &::after {
+                    height: 100%;
+                }
+
+                h4,
+                span,
+                a {
+                    color: #fff;
+                }
+            }
+
+            &::after {
+                position: absolute;
+                content: "";
+                left: 0;
+                bottom: 0;
+                width: 100%;
+                height: 0;
+                background-color: $dark_color;
+                @include transition(all ease 0.5s);
+                z-index: -1;
+            }
+
+            h4 {
+                font-size: 18px;
+                color: #3a3d45;
+                font-weight: 600;
+            }
+
+            i {
+                font-size: 40px;
+                text-align: center;
+                display: block;
+                margin: auto;
+                color: $main_color;
+                margin-bottom: 15px;
+            }
+
+            span {
+                display: block;
+                color: #3a3d45;
+                font-size: 14px;
+            }
+
+            a {
+                color: #3a3d45;
+                text-transform: capitalize;
+                display: block;
+                font-size: 14px;
+            }
+        }
+    }
+
+    .form-area {
+        //max-width: 1000px;
+        margin: auto;
+        background-color: rgb(133 183 57 / 16%);
+        padding: 50px;
+        margin-bottom: 1px;
+        @include borderRadius(10px);
+
+        .contact-box {
+            max-width: 700px;
+            margin: auto;
+
+            .form-content {
+                .form-group {
+                    margin-bottom: 15px;
+
+                    .btn {
+                        background-color: $dark_color;
+                        padding: 10px 45px;
+                        display: inline-block;
+                        @include borderRadius(10px);
+                        border-color: #fff;
+                        box-shadow: 0 10px 20px 0 rgba(0, 0, 0, 0.16);
+                        color: #fff;
+                    }
+                }
+
+                .form-control {
+                    border: none;
+                    @include transition(all ease 0.3s);
+                    color: #333;
+                    background-color: #fff;
+                    font-size: 14px;
+                    padding: 15px;
+                    border-bottom: 1px solid transparent;
+                    @include borderRadius(5px);
+
+                    &:hover,
+                    &:focus {
+                        box-shadow: none;
+                        outline: none;
+                        border-color: #5a5a5a;
+                    }
+
+                    &::placeholder {
+                        color: #79859c;
+                    }
+                }
+
+                textarea {
+                    resize: none;
+                }
+            }
+
+            .successfully {
+                color: #ffffff;
+                padding: 9px 15px;
+                font-size: 16px;
+                margin-bottom: 0;
+                @include borderRadius(20px);
+                margin-top: 25px;
+                box-shadow: 1px 1px 25px -15px #646464;
+                background-color: $main_color;
+            }
+        }
+    }
+}
+
+//contact page
+
+
+//notifications
+section.notifications {
+    padding: $padding_section;
+    background-color: #F0F1F3;
+
+    .notifications-content {
+        display: grid;
+        grid-template-columns: auto;
+        gap: 5px;
+
+        .notifications-box {
+            width: 100%;
+            border-inline-start: 3px solid $main_color;
+
+            h4 {
+                font-size: 14px;
+                font-weight: 600;
+                margin-bottom: 0;
+            }
+
+            p {
+                font-size: 12px;
+                margin-bottom: 0
+            }
+
+            .time {
+                font-size: 12px;
+                color: #000
+            }
+
+            &.alert {
+                display: grid;
+                grid-template-columns: repeat(3, auto);
+                align-items: center;
+                padding-right: 0.3rem 1.5rem;
+                margin-bottom: 0;
+
+                .btn-close {
+                    font-size: 12px;
+
+                    &:focus {
+                        box-shadow: none;
+                    }
+                }
+            }
+
+            .image {
+                margin-inline-end: 15px;
+                @include borderRadius(50%);
+                overflow: hidden;
+                height: 60px;
+                width: 60px;
+
+                img {
+                    object-fit: cover;
+                    -o-object-fit: cover;
+                    width: 100%;
+                    height: 100%;
+                }
+            }
+        }
+    }
+}
+
+//notifications
+
+//profile
+section.profile {
+    padding: $padding_section;
+    background-color: #fbfbfb;
+
+    .profile-content {
+        .tab-content {
+            .subtitle {
+                text-transform: capitalize;
+                font-size: 18px;
+                margin-bottom: 15px
+            }
+
+        }
+        .alert {
+            background-color: rgb(133 183 44 / 26%);
+            border: none;
+            border-inline-start: 5px solid $main_color;
+            button {
+                &:focus {
+                    box-shadow: none
+                }
+            }
+        }
+
+        .profile-info {
+            overflow: hidden;
+            @include borderRadius(15px);
+            background-color: $main_color;
+            text-align: center;
+            padding: 40px;
+
+            .image {
+                width: 100px;
+                height: 100px;
+                margin: auto;
+                @include borderRadius(50%);
+                overflow: hidden;
+                border: 3px solid #fff;
+                margin-bottom: 20px;
+
+                img {
+                    object-fit: cover;
+                    -o-object-fit: cover;
+                    width: 100%;
+                    height: 100%;
+                }
+            }
+
+            h3 {
+                font-size: 18px;
+                color: #fff;
+                font-weight: 600;
+                margin-bottom: 25px;
+            }
+
+            p {
+                color: #efefef;
+                font-size: 14px;
+                text-transform: capitalize
+            }
+
+            .btn {
+                @include borderRadius(20px);
+                padding: 8px 25px;
+                background-color: $dark_color;
+                border-color: $dark_color;
+                color: #fff
+            }
+        }
+
+        .nav {
+            padding: 25px;
+            @include borderRadius(15px);
+            margin-bottom: 20px;
+
+            .nav-link {
+                text-align: initial;
+                color: $dark_color;
+                font-size: 15px;
+                text-transform: capitalize;
+                @include borderRadius(15px);
+
+                &.active {
+                    background-color: $main_color;
+                    color: #fff
+                }
+            }
+        }
+
+        .form-content {
+            padding: 25px;
+            @include borderRadius(15px);
+            background-color: #fff;
+
+            .form-group {
+                margin-bottom: 15px;
+
+                .btn {
+                    background-color: $main_color;
+                    padding: 8px 20px;
+                    font-size: 14px;
+                    display: inline-block;
+                    @include borderRadius(15px);
+                    border-color: #fff;
+                    box-shadow: 0 10px 20px 0 rgba(0, 0, 0, 0.16);
+                    text-transform: capitalize;
+                }
+            }
+
+            .form-control {
+                border: none;
+                @include transition(all ease 0.3s);
+                color: #333;
+                background-color: #f6f6f6;
+                font-size: 14px;
+                padding: 15px;
+                border-bottom: 1px solid transparent;
+                @include borderRadius(5px);
+
+                &:hover,
+                &:focus {
+                    box-shadow: none;
+                    outline: none;
+                    border-color: $main_color;
+                }
+
+                &::placeholder {
+                    color: #79859c;
+                }
+
+                &:not(:disabled):not([readonly])::file-selector-button {
+                    background-color: #f6f6f6;
+                }
+            }
+        }
+
+        //table page
+        .table-area {
+            padding: 5px;
+            margin-bottom: 15px;
+
+            table {
+                overflow: visible;
+                border-collapse: separate;
+                border-spacing: 0 10px;
+                min-width: 700px;
+
+                .recipe-name {
+                    display: flex;
+                    align-items: center;
+                    color: gray;
+                    p {
+                        line-height: 1.3;
+                        @extend %max_lines;
+                        -webkit-line-clamp: 2;
+                        margin-bottom: 0;
+                    }
+
+                    &:hover {
+                        color: $main_color
+                    }
+                }
+
+                .image {
+                    width: 50px;
+                    min-width: 50px;
+                    height: 50px;
+                    @include borderRadius(50%);
+                    overflow: hidden;
+                    margin-inline-end: 10px;
+
+                    img {
+                        object-fit: cover;
+                        -o-object-fit: cover;
+                        width: 100%;
+                        height: 100%;
+                    }
+                }
+
+                .remove {
+                    background-color: #EE3529;
+                    @include borderRadius(20px);
+                    color: #fff;
+                    text-transform: capitalize;
+                    font-size: 20px;
+                    padding: 0;
+                    height: 30px;
+                    width: 30px;
+                    line-height: 0;
+                    @extend %center;
+
+                    &:focus {
+                        box-shadow: none;
+                    }
+                }
+
+                .spacer {
+                    height: 10px;
+                    background: transparent;
+                }
+
+                .tr-shadow {
+                    @include boxshadow(0px 10px 20px 0px rgba(0, 0, 0, 0.03));
+                }
+
+                &.table {
+                    margin-bottom: 0;
+
+                    thead {
+                        th {
+                            font-size: 16px;
+                            color: #000;
+                            text-transform: capitalize;
+                            border: none;
+                            vertical-align: middle;
+                            padding: 5px 20px;
+                            white-space: nowrap;
+                        }
+                    }
+
+                    tbody {
+                        background: #fff;
+
+                        td {
+                            font-size: 14px;
+                            color: #808080;
+                            vertical-align: middle;
+                            padding: 10px 20px;
+                            border: none;
+
+                            &.desc {
+                                color: #00aeef;
+                            }
+                        }
+
+                        tr {
+                            box-shadow: 0px 2px 5px 0 rgb(0 0 0 / 3%);
+
+                            &.odd,
+                            &.even {
+                                background-color: #fff;
+                                --bs-table-accent-bg: unset;
+                            }
+
+                            &.even {
+                                background-color: #efefef;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+//profile

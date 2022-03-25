@@ -1,0 +1,51 @@
+.image-input {
+    .image-input-wrapper {
+        width: 350px;
+        max-width: 100%;
+        height: 250px;
+    }
+}
+
+// .symbol {
+//     display: block;
+//     > img {
+//         height: auto;
+//         max-width: 200px !important;
+//         min-height: 75px;
+//     }
+// }
+
+.file {
+    .dropzone {
+        position: relative;
+
+        input {
+            width: 100%;
+            height: 100%;
+            display: block;
+            position: absolute;
+            top: 0;
+            left: 0;
+            opacity: 0;
+        }
+    }
+}
+
+
+.dropzone .dz-preview .dz-image {
+    width: 250px;
+    height: 200px;
+}
+
+.dropzone .dz-preview {
+    margin-top: 50px;
+}
+
+.dropzone .dz-preview .dz-details {
+    padding: 6em 1em 2rem;
+}
+
+.dropzone .dz-preview .dz-error-mark,
+.dropzone .dz-preview .dz-success-mark {
+    top: 65px;
+}

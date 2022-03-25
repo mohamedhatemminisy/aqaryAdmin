@@ -1,0 +1,227 @@
+extend index
+
+block website_title
+    title #{website_title} | recipes
+
+block home_block
+    //breadcrumb
+    nav(aria-label="breadcrumb" class="main-breadcrumb" style="background-image:url('images/bgs/broad.jpg')")
+        div(class="container")
+            div(class="breadcrumb-title")
+                h2 recipes
+            nav(aria-label="breadcrumb")
+                ol(class="breadcrumb")
+                    li(class="breadcrumb-item")
+                        a(href="#") Home
+                    li(class="breadcrumb-item active", aria-current="page") recipes
+    //breadcrumb
+
+    //recipes page
+    section(class="recipes recipes-page")
+        div(class="container")
+            div(class="recipes-content")
+                div(class="row")
+                    div(class="col-lg-3")
+                        div(class="sidebar-widget")
+                            div(class="filter-recipes")
+                                form(action="" method="") 
+                                    div(class="type")
+                                        div(class="subtitle") 
+                                            h3 food type
+                                        div(class="form-check")
+                                            input(class="form-check-input", id="recipeTypeRadio1" type="radio", name="recipeTypeRadio")
+                                            label(class="form-check-label", for="recipeTypeRadio1")
+                                                | option 1
+                                        div(class="form-check")
+                                            input(class="form-check-input", id="recipeTypeRadio2" type="radio", name="recipeTypeRadio")
+                                            label(class="form-check-label", for="recipeTypeRadio2")
+                                                | option 2
+                                        div(class="form-check")
+                                            input(class="form-check-input", id="recipeTypeRadio3" type="radio", name="recipeTypeRadio")
+                                            label(class="form-check-label", for="recipeTypeRadio3")
+                                                | option 3
+                                        div(class="form-check")
+                                            input(class="form-check-input", id="recipeTypeRadio4" type="radio", name="recipeTypeRadio", checked)
+                                            label(class="form-check-label", for="recipeTypeRadio4")
+                                                | option 4
+                                    hr
+                                    div(class="checkboxs")
+                                        div(class="subtitle") 
+                                            h3 check boxs
+                                        div(class="form-check")
+                                            input(class="form-check-input", id="recipeCheckBox1" type="checkbox", value="" checked)
+                                            label(class="form-check-label", for="recipeCheckBox1")
+                                                | checkbox 1
+                                        div(class="form-check")
+                                            input(class="form-check-input", id="recipeCheckBox2" type="checkbox", value="")
+                                            label(class="form-check-label", for="recipeCheckBox2")
+                                                | checkbox 2
+                                        div(class="form-check")
+                                            input(class="form-check-input", id="recipeCheckBox3" type="checkbox", value="")
+                                            label(class="form-check-label", for="recipeCheckBox3")
+                                                | checkbox 3
+                                        div(class="form-check")
+                                            input(class="form-check-input", id="recipeCheckBox4" type="checkbox", value="")
+                                            label(class="form-check-label", for="recipeCheckBox4")
+                                                | checkbox 4
+                                        hr
+                                        div(class="recipe-dropdowns")
+                                            div(class="subtitle") 
+                                                h3 dropdowns
+                                            div(class="form-group position-relative")
+                                                div(class="input-group has-validation")
+                                                    select(class="select", placeholder="select", required)
+                                                        option(value="" disabled selected) dropdown name
+                                                        option(value="") optoin 1
+                                                        option(value="") optoin 2 
+                                                        option(value="") optoin 3
+                                        div(class="recipe-buttons")
+                                            button(class="btn" class="submit" type="submit")
+                                                i(class="bi bi-search")
+                                                | search
+                                            button(class="btn btn-outline-light" class="reset" type="reset")
+                                                | reset
+                            div(class="tags")
+                                div(class="subtitle") 
+                                    h3 popular Tags
+                                a(href="#") Food
+                                a(href="#") Foodie
+                                a(href="#") Chicken
+                                a(href="#") Meat
+                                a(href="#") Health
+                                a(href="#") Vegan
+                                a(href="#") Fit
+                                a(href="#") Fruit
+
+                    div(class="col-lg-9")
+                        div(class="row")
+                            div(class="col-lg-6 col-md-6")
+                                div(class="recipe-box")
+                                    a(href="#!") 
+                                        div(class="image")
+                                            img(src="images/recipes/01.jpg", class="img-fluid" alt="")
+                                            a(class="fav-btn" title="favorite")
+                                                i(class="bi bi-heart") 
+                                        div(class="text")
+                                            h3(class="subtitle") Puffy Pancakes Glazed With Caramel Topped With Fruits
+                                            p(class="details") Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto, suscipit repellendus nulla sint ipsum iste fuga distinctio eveniet totam vero modi, minima quod, ratione tenetur optio laboriosam dicta quia id.
+                                            hr
+                                            div(class="meta")
+                                                div(class="single")
+                                                    i(class="bi bi-calendar-event")
+                                                    span 25/1/2021
+                                                div(class="single")
+                                                    i(class="bi bi-eye")
+                                                    span 25 views
+                            div(class="col-lg-6 col-md-6")
+                                div(class="recipe-box")
+                                    a(href="#!") 
+                                        div(class="image")
+                                            img(src="images/recipes/02.jpg", class="img-fluid" alt="")
+                                            a(class="fav-btn" title="favorite")
+                                                i(class="bi bi-heart") 
+                                        div(class="text")
+                                            h3(class="subtitle") Puffy Pancakes Glazed With Caramel Topped With Fruits
+                                            p(class="details") Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto, suscipit repellendus nulla sint ipsum iste fuga distinctio eveniet totam vero modi, minima quod, ratione tenetur optio laboriosam dicta quia id.
+                                            hr
+                                            div(class="meta")
+                                                div(class="single")
+                                                    i(class="bi bi-calendar-event")
+                                                    span 25/1/2021
+                                                div(class="single")
+                                                    i(class="bi bi-eye")
+                                                    span 25 views
+                            div(class="col-lg-6 col-md-6")
+                                div(class="recipe-box")
+                                    a(href="#!") 
+                                        div(class="image")
+                                            img(src="images/recipes/03.jpg", class="img-fluid" alt="")
+                                            a(class="fav-btn" title="favorite")
+                                                i(class="bi bi-heart") 
+                                        div(class="text")
+                                            h3(class="subtitle") Puffy Pancakes Glazed With Caramel Topped With Fruits
+                                            p(class="details") Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto, suscipit repellendus nulla sint ipsum iste fuga distinctio eveniet totam vero modi, minima quod, ratione tenetur optio laboriosam dicta quia id.
+                                            hr
+                                            div(class="meta")
+                                                div(class="single")
+                                                    i(class="bi bi-calendar-event")
+                                                    span 25/1/2021
+                                                div(class="single")
+                                                    i(class="bi bi-eye")
+                                                    span 25 views
+                            div(class="col-lg-6 col-md-6")
+                                div(class="recipe-box")
+                                    a(href="#!") 
+                                        div(class="image")
+                                            img(src="images/recipes/02.jpg", class="img-fluid" alt="")
+                                            a(class="fav-btn" title="favorite")
+                                                i(class="bi bi-heart") 
+                                        div(class="text")
+                                            h3(class="subtitle") Puffy Pancakes Glazed With Caramel Topped With Fruits
+                                            p(class="details") Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto, suscipit repellendus nulla sint ipsum iste fuga distinctio eveniet totam vero modi, minima quod, ratione tenetur optio laboriosam dicta quia id.
+                                            hr
+                                            div(class="meta")
+                                                div(class="single")
+                                                    i(class="bi bi-calendar-event")
+                                                    span 25/1/2021
+                                                div(class="single")
+                                                    i(class="bi bi-eye")
+                                                    span 25 views
+                            div(class="col-lg-6 col-md-6")
+                                div(class="recipe-box")
+                                    a(href="#!") 
+                                        div(class="image")
+                                            img(src="images/recipes/01.jpg", class="img-fluid" alt="")
+                                            a(class="fav-btn" title="favorite")
+                                                i(class="bi bi-heart") 
+                                        div(class="text")
+                                            h3(class="subtitle") Puffy Pancakes Glazed With Caramel Topped With Fruits
+                                            p(class="details") Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto, suscipit repellendus nulla sint ipsum iste fuga distinctio eveniet totam vero modi, minima quod, ratione tenetur optio laboriosam dicta quia id.
+                                            hr
+                                            div(class="meta")
+                                                div(class="single")
+                                                    i(class="bi bi-calendar-event")
+                                                    span 25/1/2021
+                                                div(class="single")
+                                                    i(class="bi bi-eye")
+                                                    span 25 views
+                            div(class="col-lg-6 col-md-6")
+                                div(class="recipe-box")
+                                    a(href="#!") 
+                                        div(class="image")
+                                            img(src="images/recipes/02.jpg", class="img-fluid" alt="")
+                                            a(class="fav-btn" title="favorite")
+                                                i(class="bi bi-heart") 
+                                        div(class="text")
+                                            h3(class="subtitle") Puffy Pancakes Glazed With Caramel Topped With Fruits
+                                            p(class="details") Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto, suscipit repellendus nulla sint ipsum iste fuga distinctio eveniet totam vero modi, minima quod, ratione tenetur optio laboriosam dicta quia id.
+                                            hr
+                                            div(class="meta")
+                                                div(class="single")
+                                                    i(class="bi bi-calendar-event")
+                                                    span 25/1/2021
+                                                div(class="single")
+                                                    i(class="bi bi-eye")
+                                                    span 25 views
+                            div(class="col-12")
+                                nav(aria-label="Page navigation" class="navigation")
+                                    ul(class="pagination")
+                                        li(class="page-item")
+                                            a(class="page-link arr", href="#!", aria-label="Previous")
+                                                span(aria-hidden="true") &laquo;
+                                        li(class="page-item active")
+                                            a(class="page-link", href="#!") 1
+                                        li(class="page-item")
+                                            a(class="page-link", href="#!") 2
+                                        li(class="page-item")
+                                            a(class="page-link", href="#!") 3
+                                        li(class="page-item")
+                                            a(class="page-link", href="#!") 4
+                                        li(class="page-item")
+                                            a(class="page-link", href="#!") 5
+                                        li(class="page-item")
+                                            a(class="page-link", href="#!") 6
+                                        li(class="page-item")
+                                            a(class="page-link arr", href="#!", aria-label="Next")
+                                                span(aria-hidden="true") &raquo;
+    //recipes page

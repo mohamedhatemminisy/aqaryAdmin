@@ -1,0 +1,41 @@
+include includes/variables.pug
+doctype 
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(name="description" content="description here")
+        meta(http-equiv="Content-Type", content="text/html; charset=utf-8")
+        meta(name="keywords", content="")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        link(rel="shortcut icon" href="images/favicon.png")
+        <!--[if lt IE 9]>
+        <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/r29/html5.min.js">
+        </script>
+        <![endif]-->
+        block website_title
+            title #{website_title} | home
+        include includes/styles.pug
+    body
+        div(class="main-wrapper")
+            include includes/header.pug
+            block home_block 
+                include includes/home.pug
+
+            //toast notification adding
+            div(class="position-fixed bottom-0 end-0 p-3", style="z-index: 11")
+                div(class="toast", id="addFavToast" role="alert", aria-live="assertive", aria-atomic="true")
+                    div(class="toast-header")
+                        span(class="me-auto") added to favorits successfully
+                        button(type="button", class="btn-close btn-close-white", data-bs-dismiss="toast", aria-label="Close")
+            //toast notification adding
+            
+            //toast notification removing
+            div(class="position-fixed bottom-0 end-0 p-3", style="z-index: 11")
+                div(class="toast", id="removeFavToast" role="alert", aria-live="assertive", aria-atomic="true")
+                    div(class="toast-header")
+                        span(class="me-auto") removed from favorits successfully
+                        button(type="button", class="btn-close btn-close-white", data-bs-dismiss="toast", aria-label="Close")
+            //toast notification removing
+
+            include includes/footer.pug
+        include includes/scripts.pug

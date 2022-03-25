@@ -1,0 +1,178 @@
+@media screen and (max-width: 1500px) {}
+
+@media screen and (max-width: 1199px) {
+    section.about-page {
+        .about-content {
+            .right-pos, .left-pos {
+                z-index: -1;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 991px) {
+    header {
+        .navbar {
+            padding: 10px 0;
+        }
+
+        .hamburger-menu {
+            display: inline-block;
+        }
+    }
+    section.about-page {
+        .about-content {
+            .right-pos, .left-pos {
+                opacity: .5;
+            }
+        }
+    }
+    section.main-slider {
+        .owl-nav {
+            top: calc(85% - 25px);
+
+            .owl-next, .owl-prev {
+                width: 35px;
+                height: 35px;
+                i {
+                    font-size: 16px
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 767px) {
+    section.featured-properties {
+        .featured-slider {
+            .item {
+                img {
+                    height: 17rem
+                }
+
+                .item-details {
+                    padding: 10px 30px;
+
+                    h3 {
+                        font-size: 16px;
+                    }
+                }
+
+                .btn {
+                    padding: 5px 20px;
+                    font-size: 14px
+                }
+            }
+        }
+    }
+
+    .single-property-page .single-property-images .slider-for .item img {
+        height: 15rem;
+    }
+
+    section.profile {
+        .profile-content {
+            .nav {
+                margin-bottom: 25px;
+                order: 2
+            }
+            .profile-info {
+                margin-bottom: 25px
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 670px) {
+    .single-property-page .single-property-details ul li {
+        width: 100%;
+    }
+
+    .single-property-page .single-property-features ul li {
+        width: 100%
+    }
+
+    .single-property-page .property-content aside {
+        margin-top: 25px;
+    }
+}
+
+@media screen and (max-width: 575px) {
+    section.main-slider .main-slider-carousel .owl-item .item .item-details h3 {
+        font-size: 24px
+    }
+    section.search .result {
+        margin-bottom: 15px
+    }
+
+    section.contact .form-area {
+        padding: 40px 20px;
+    }
+
+    section.notifications .notifications-content .notifications-box {
+        .image {
+            margin-bottom: 10px
+        }
+
+        .alert {
+            display: block;
+            padding: 10px
+        }
+    }
+
+    section.instagram .instagram-content .box {
+        padding-right: calc(var(--bs-gutter-x) * .5);
+        padding-left: calc(var(--bs-gutter-x) * .5);
+        margin-top: var(--bs-gutter-y);
+        margin-bottom: 10px;
+    }
+    section.about-page {
+        .about-content {
+            .right-pos, .left-pos {
+                max-width: 150px;
+                top: 70%;
+            }
+            .right-pos {
+                right: 0;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .hero-header {
+        .hero-content {
+            .hero-text {
+                h1 {
+                    font-size: 30px;
+                }
+            }
+        }
+    }
+
+}
+
+@media screen and (max-width: 400px) {
+    section.featured-properties {
+        .featured-slider {
+            .item {
+                img {
+                    height: 15rem
+                }
+
+                .item-details {
+                    padding: 10px 20px;
+
+                    h3 {
+                        font-size: 14px;
+                    }
+                }
+
+                .btn {
+                    padding: 5px 20px;
+                    font-size: 14px
+                }
+            }
+        }
+    }
+}

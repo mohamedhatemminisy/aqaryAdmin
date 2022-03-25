@@ -1,0 +1,206 @@
+/** rtl styles **/
+html[dir=rtl] {
+    // @import "plugins_css/bootstrap.rtl.min";
+    
+    body {
+        font-family: "Tajawal", sans-serif;
+    }
+
+    // a {
+    //     color: initial;
+    //     text-decoration: none;
+    // }
+
+    .me-auto {
+        margin-left: auto !important;
+        margin-right: 0 !important;
+    }
+
+    .breadcrumb-item + .breadcrumb-item::before {
+        float: right;
+        padding-left: 5px
+    }
+
+    .modal-header .btn-close {
+        margin-left: 0
+    }
+
+    header {
+        .navbar {
+            .navbar-nav {
+                .nav-link{
+                    &::before {
+                        right: -15px;
+                        left: auto
+                    }
+                }
+                .nav-item {
+                    .dropdown-menu {
+                        li {
+                            text-align: initial;
+                        }
+                    }
+                }
+            }
+        }
+        .offcanvas {
+            .navbar .navbar-nav .nav-item .dropdown-toggle::after {
+                left: 0;
+                right: auto
+            }
+            .offcanvas-header {
+                justify-content: flex-start;
+            }
+        }
+
+        .top-bar  {
+            .login-modal,
+            .register-modal,
+            .forget-password-modal {
+                .form-control {
+                    @include borderRadius(5px 0 0 5px !important);
+                }
+                .input-group.has-validation > .dropdown-toggle:nth-last-child(n+4), .input-group.has-validation > :nth-last-child(n+3):not(.dropdown-toggle):not(.dropdown-menu), .input-group:not(.has-validation) > .dropdown-toggle:nth-last-child(n+3), .input-group:not(.has-validation) > :not(:last-child):not(.dropdown-toggle):not(.dropdown-menu) {
+                    border-top-right-radius: 0;
+                    border-bottom-right-radius: 0;
+                    @include borderRadius(0 5px 5px 0 !important);
+                }
+            }
+        } 
+    }
+
+    .form-control.is-invalid,
+    .was-validated .form-control:invalid {
+        padding-left: calc(1.5em + .75rem);
+        background-position: left calc(.375em + .1875rem) center;
+    }
+
+    .form-control.is-valid, .was-validated .form-control:valid {
+        padding-left: calc(1.5em + .75rem);
+        background-position: left calc(.375em + .1875rem) center;
+    }
+    
+    section.single-recipe-page .single-recipe-content .single-recipe-box .ingredients .ct-list li {
+        padding-left: 0;
+        padding-right: 25px;
+
+        &::before {
+            right: 0
+        }
+    }
+    section.single-recipe-page .single-recipe-content .single-recipe-box .comments-list .comment-item .comment-body span {
+        left: 0;
+        right: auto
+    }
+
+    .dropdown-toggle {
+        &::after {
+            margin-left: 0;
+            margin-right: .255em;
+        }
+    }
+
+    .dk-selected:before,
+    .dk-selected:after {
+        right: auto;
+        left: 0
+    }
+
+    .search {
+        .input-group > :not(:first-child):not(.dropdown-menu):not(.valid-tooltip):not(.valid-feedback):not(.invalid-tooltip):not(.invalid-feedback) {
+            border-top-left-radius: 15px;
+            border-bottom-left-radius: 15px;
+            border-top-right-radius: 0;
+            border-bottom-right-radius: 0;
+        }
+        .input-group:not(.has-validation) > .dropdown-toggle:nth-last-child(n+3), .input-group:not(.has-validation) > :not(:last-child):not(.dropdown-toggle):not(.dropdown-menu) {
+            border-top-right-radius: 15px;
+            border-bottom-right-radius: 15px;
+            border-top-left-radius: 0;
+            border-bottom-left-radius: 0;
+        }
+    }
+
+    .login-register {
+        .form-group .form-control {
+            margin-left: 0 !important;
+            margin-right: -1px !important;
+            border-top-right-radius: 0 !important;
+            border-bottom-right-radius: 0 !important;
+            border-top-left-radius: 5px !important;
+            border-bottom-left-radius: 5px !important;
+            text-align: right;
+        }
+    }
+
+    .form-check {
+        padding-left: 0;
+        padding-right: 1.5em;
+    }
+
+    .form-check .form-check-input {
+        float: right;
+        margin-right: -1.5em;
+        margin-left: 0;
+    }
+
+    .form-control {
+        &[type="number"], &[type="email"] {
+            direction: rtl !important;
+        }
+    }
+
+    .alert-dismissible {
+        padding-left: 3rem;
+        padding-right: 10px
+    }
+
+    .alert-dismissible .btn-close {
+        right: auto;
+        left: 0
+    }
+
+    .accordion-button::after {
+        margin-left: 0;
+        margin-right: auto;
+    }
+    section.main-slider .main-slider-carousel .owl-item .item .item-details p {
+        font-weight: 600
+    }
+
+    footer {
+        .footer-content {
+            .footer-box {
+                .contact {
+                    ul {
+                        li {
+                            padding-left: 0;
+                            padding-right: 40px;
+
+                            i {
+                                right: 0;
+                                left: auto
+                            }
+                        }
+                    }
+                }
+
+                .main {
+                    ul {
+                        li {
+                            padding-left: 0;
+                            padding-right: 20px;
+
+                            &::after {
+                                right: 0;
+                                left: auto
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+/** rtl styles **/
